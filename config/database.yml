@@ -1,0 +1,23 @@
+default: &default
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+  adapter: postgresql
+  encoding: unicode
+  username: alex
+  password: qwerty123
+  host: localhost
+  port: 5432
+
+
+development:
+  <<: *default
+  database: showtime_development
+
+test:
+  <<: *default
+  database: showtime_test
+
+production:
+  <<: *default
+  adapter: sqlite3
+  database: db/production.sqlite3
