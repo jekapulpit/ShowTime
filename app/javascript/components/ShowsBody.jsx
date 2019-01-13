@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
-class _all_shows extends React.Component {
-
+import AllShows from "./AllShows";
+class ShowsBody extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -10,18 +10,18 @@ class _all_shows extends React.Component {
     }
 
     componentDidMount(){
-        fetch('/api/v1/fruits.json')
+        fetch('/api/v1/shows.json')
             .then((response) => {return response.json()})
-            .then((data) => {this.setState({ fruits: data }) });
+            .then((data) => {this.setState({ shows: data }) });
     }
 
-    render () {
-        return (
+    render(){
+        return(
             <div>
-               <h1>todo: list</h1>
+                <AllShows shows={this.state.shows} />
             </div>
-        );
+        )
     }
 }
 
-export default _all_shows
+export default ShowsBody
