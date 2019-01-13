@@ -14,3 +14,4 @@ script:
 - psql -c "ALTER DATABASE showtime_test OWNER TO alex;" -U postgres
 - bundle exec rake db:migrate
 - bundle exec rubocop
+- bundle exec rspec spec/
