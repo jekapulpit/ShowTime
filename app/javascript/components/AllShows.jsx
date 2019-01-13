@@ -6,7 +6,7 @@ const AllShows = (props) => {
         return(
             <div key={show.id}>
                 <h1>{show.title}</h1>
-                <p>{show.discription}</p>
+                <p>{show.description}</p>
             </div>
         )
     });
