@@ -10,6 +10,9 @@ Metrics/MethodLength:
   - 'db/schema.rb'
   - 'db/migrate/*'
 
+Style/ClassAndModuleChildren:
+  Enabled: false
+
 Metrics/AbcSize:
   Max: 20
   Exclude:
@@ -24,6 +27,7 @@ Metrics/LineLength:
   Max: 120
   Exclude:
   - 'db/schema.rb'
+  - 'config/initializers/simple_form.rb'
   IgnoredPatterns:
     - '#.'
 

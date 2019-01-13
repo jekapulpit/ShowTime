@@ -13,5 +13,6 @@ script:
 - psql -c "GRANT ALL PRIVILEGES ON DATABASE showtime_test to alex;" -U postgres
 - psql -c "ALTER DATABASE showtime_test OWNER TO alex;" -U postgres
 - bundle exec rake db:migrate
+- bundle exec rake db:migrate RAILS_ENV=test
 - bundle exec rubocop
 - bundle exec rspec spec/
