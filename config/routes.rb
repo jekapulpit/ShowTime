@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   resources :users
   get 'users/profile', as: 'user_root'
 
-  root 'users#profile'
+  root 'shows#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
