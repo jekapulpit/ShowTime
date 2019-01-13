@@ -31,6 +31,10 @@ Metrics/LineLength:
   IgnoredPatterns:
     - '#.'
 
+Style/FrozenStringLiteralComment:
+  Exclude:
+  - 'db/schema.rb'
+
 Layout/EmptyLinesAroundBlockBody:
   Exclude:
   - 'db/schema.rb'
