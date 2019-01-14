@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class Api::V1::ShowsController < ApplicationController
+  skip_before_action :verify_authenticity_token
+
   def index
     render json: Show.all
   end
@@ -17,6 +19,7 @@ class Api::V1::ShowsController < ApplicationController
 
   def destroy
     Show.destroy(params[:id])
+    render json: {}
   end
 
   def update
@@ -28,6 +31,6 @@ class Api::V1::ShowsController < ApplicationController
   private
 
   def show_params
-    params.require(:show).permit(:name, :description)
+    params.require(:show).permit(:title, :description)
   end
 end
