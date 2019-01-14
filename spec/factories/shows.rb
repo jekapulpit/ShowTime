@@ -2,7 +2,7 @@
 
 FactoryGirl.define do
   factory :show do
-    title 'MyString'
-    description 'MyText'
+    sequence(:title) { |n| "Show ##{n}" }
+    description 'My Favorite Show!'
   end
 end
