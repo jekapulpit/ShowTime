@@ -21,6 +21,7 @@ Metrics/AbcSize:
 Metrics/BlockLength:
   Exclude:
   - 'config/environments/development.rb'
+  - 'spec/controllers/*'
   - 'db/schema.rb'
 
 Metrics/LineLength:
