@@ -8,6 +8,7 @@ class Show extends React.Component {
                 <h1>{this.props.show.title}</h1>
                 <p>{this.props.show.description}</p>
                 <button onClick={() => this.props.handleDelete(this.props.show.id)}>Delete</button>
+                <a href={'/shows/' + this.props.show.id}>more</a>
             </React.Fragment>
         )
     }

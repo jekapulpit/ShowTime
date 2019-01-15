@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   end
 
   get 'home/index'
+  get 'shows/:id', to: 'home#show', as: 'show'
 
   devise_for :users
   resources :users
