@@ -26,6 +26,6 @@ class Api::V1::ShowsController < ApplicationController
   private
 
   def show_params
-    params.require(:show).permit(:title, :description)
+    params.require(:show).permit(:title, :description, :picture)
   end
 end
