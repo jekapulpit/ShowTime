@@ -7,11 +7,6 @@ class Api::V1::ShowsController < ApplicationController
     render json: Show.all
   end
 
-  def show
-    show = Show.find(params[:id])
-    render json: show
-  end
-
   def create
     show = Show.create(show_params)
     render json: show

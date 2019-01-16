@@ -15,14 +15,6 @@ RSpec.describe Api::V1::ShowsController, type: :controller do
     end
   end
 
-  describe 'get shows#show' do
-    it 'should render json' do
-      get 'show', params: { id: show.id }
-      expect(response.content_type).to eq('application/json')
-      expect(response.body).to have_json_path('id')
-    end
-  end
-
   describe 'GET shows#index' do
     it 'should render 2 shows in json format' do
       FactoryGirl.create_list(:show, 2)
