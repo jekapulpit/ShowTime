@@ -10,7 +10,7 @@ class ShowPage extends React.Component {
     return (
       <React.Fragment>
         <h1>Show page:</h1>
-        <ShowFields show={this.props.show}/>
+        <ShowFields show={this.props.show} />
       </React.Fragment>
     );
   }

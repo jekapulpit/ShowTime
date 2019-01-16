@@ -1,1 +1,6 @@
+<% if @show.picture.attached? %>
+  <%= image_tag(@show.picture) %>
+<% else %>
+  <%= image_tag('no-photo.jpg') %>
+<% end %>
 <%= react_component('show/ShowPage', props = { show: @show }) %>
