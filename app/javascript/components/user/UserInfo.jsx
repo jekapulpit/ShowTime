@@ -1,7 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import UserInfo from "./UserInfo";
-class Profile extends React.Component {
+class UserInfo extends React.Component {
     constructor(props) {
         super(props);
     }
@@ -9,11 +8,12 @@ class Profile extends React.Component {
     render () {
         return (
             <React.Fragment>
-                <h1>{this.props.user.username}</h1>
-                <UserInfo user={this.props.user} />
+                <p>{this.props.user.realname}</p>
+                <p>{this.props.user.dateofbirth}</p>
+                <p>{this.props.user.moreinfo}</p>
             </React.Fragment>
         );
     }
 }
 
-export default Profile
+export default UserInfo
